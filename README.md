@@ -52,14 +52,30 @@ cat < file2
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ file1 file2 differ: char 1, line 1
 comm file1 file2
  ## OUTPUT
-
+        anil aggarwal
+        barun sengupta
+        c.k.shukla
+chanchal singhvi
+c.k.shukla
+        lalit chowdury
+                s.n.dasgupta
+sumit chakrobarty
  
 diff file1 file2
 ## OUTPUT
-
+--- file1
++++ file2
+@@ -1,4 +1,5 @@
+-chanchal singhvi
++anil aggarwal
++barun sengupta
+ c.k.shukla
++lalit chowdury
+ s.n.dasgupta
+-sumit chakrobarty
 
 #Filters
 
@@ -82,7 +98,19 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
+cut: unrecognized option: 3
+BusyBox v1.31.1 () multi-call binary.
+ 
+Usage: cut [OPTIONS] [FILE]...
+ 
+Print selected fields from each input FILE to stdout
+ 
+        -b LIST Output only bytes from LIST
+        -c LIST Output only characters from LIST
+        -d CHAR Use CHAR instead of tab as the field delimiter
+        -s      Output only the lines containing delimiter
+        -f N    Print only these fields
+        -n      Ignored
 
 
 
